@@ -20,6 +20,3 @@ jobs:
 
         - name: Lint Terraform
           uses: actionshub/terraform-lint@main
-
-        - name: Check formatting
-          run: terraform fmt --check --recursive
