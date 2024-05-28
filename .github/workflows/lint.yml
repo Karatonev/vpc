@@ -21,4 +21,4 @@ jobs:
             ref: ${{ github.ref }}
 
         - name: Check terraform formatting
-          run: terraform fmt --recursive
+          run: terraform fmt check --recursive
