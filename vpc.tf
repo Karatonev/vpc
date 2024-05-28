@@ -112,7 +112,3 @@ locals {
 locals {
   routing_tables_to_create = merge({ public = [for k, v in var.subnets : v if v.type == "public"][0] }, { for k, v in var.subnets : k => v if v.type == "private" })
 }
-
-locals {
-dummy_local_map="please_ignore_me"
-}
