@@ -1,0 +1,14 @@
+name: terrafort-lint
+on: [push, pull_request]
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+
+        - name: Checkout code
+          uses: actions/checkout@main
+
+        - name: Lint terraform
+          uses: actionshub/terraform-lint@main
+          
