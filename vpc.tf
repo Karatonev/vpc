@@ -116,4 +116,5 @@ locals {
 
 locals {
 local_map="just for testing"
+local_map_01="just_for_testing"
 }
