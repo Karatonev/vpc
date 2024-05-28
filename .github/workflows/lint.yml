@@ -1,14 +1,20 @@
 name: terrafort-lint
 on: [push, pull_request]
+
 jobs:
     lint:
         runs-on: ubuntu-latest
 
         steps:
 
-        - name: Checkout code
+        - name: Install Terraform
+          uses: hashicorp/setup-terraform@v3
+          with:
+            terraform_version: "1.7.0"
+
+        - name: Checkout Code
           uses: actions/checkout@main
 
-        - name: Lint terraform
+        - name: Lint Terraform
           uses: actionshub/terraform-lint@main
           
