@@ -1,0 +1,8 @@
+name: Output information about github object
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest 
+    steps:
+       - name: Display environment
+         run: echo "${{tojson(github)}}"
