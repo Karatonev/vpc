@@ -114,5 +114,5 @@ locals {
 }
 
 locals {
-new_local = "some_string"
+  new_local = "some_string"
 }
