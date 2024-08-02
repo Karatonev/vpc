@@ -10,11 +10,13 @@ variable "availability_zones" {
 
 variable "vpc" {
   type = object({
-    name          = string
-    cidr          = string
-    deploy_igw    = optional(bool, true)
-    deploy_nat_gw = optional(bool, false)
-    tags          = optional(map(string), {})
+    name                 = string
+    cidr                 = string
+    deploy_igw           = optional(bool, true)
+    deploy_nat_gw        = optional(bool, false)
+    enable_dns_support   = optional(bool, true)
+    enable_dns_hostnames = optional(bool, false)
+    tags                 = optional(map(string), {})
   })
 }
 
