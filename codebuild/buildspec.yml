@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 20
+    commands:
+      - echo "Installing any needed plugins"
+
+  pre_build:
+    commands:
+      - echo "Setting up Terraform backend auth"
+      - terraform init
+
+  build:
+    commands:
+      - terraform plan -out=tfplan
+
+  post_build:
+    commands:
+      - terraform apply -auto-approve tfplan
